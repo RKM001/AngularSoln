@@ -1,0 +1,14 @@
+.application-error .panel-body {
+    min-height: 280px;
+    position: relative
+}
+.application-error .errorCustomTxt {
+    position: absolute;
+    width:100%;
+    top: 50%;
+    left: 50%;    
+    transform: translate(-50%, -50%)
+}
+::ng-deep .application-error{
+    overflow: hidden;
+}

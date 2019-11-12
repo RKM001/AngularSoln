@@ -1,0 +1,29 @@
+.mex-report .modal-header {
+    background: #239a8e;
+    color: white
+}
+.mex-report .modal-header{
+    background: #239a8e;
+    color: white; padding-left: 20px
+}
+.mex-report .modal-footer .btn{
+    background: #239a8e;
+    border: solid 1px #239a8e
+}
+.mex-report .modal-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px
+}
+.mex-report .modal-body {padding: 10px 20px}
+.mex-report .filter-info > div:last-child .selected-filters{
+    margin-bottom: 0; border-bottom: 0
+}
+.mex-report .modal-header .close {
+    opacity: 1; color: white
+}
+.mex-report .modal-header .close:hover,
+.mex-report .modal-header .close:focus {
+    outline: none
+}
+.mex-report{ border: 0}

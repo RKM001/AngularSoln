@@ -1,0 +1,29 @@
+export enum Retailers {
+    'SIL' = 5,	// Silpo
+    'X5R' = 7,	// X5 Russia
+    'FIN' = 8,	// Finiper Italy
+    'AHJ' = 10,	// Albert Heijn
+    'AHU' = 12,	// Ahold USA New
+    'BCT' = 14,	// Big C NEW
+    'REW' = 15,	// REWE
+    'RIT' = 16,	// RIT-ALP
+    'MUS' = 17,	// Musgrave
+    'REN' = 18,	// REWE National
+    'HVE' = 23,	// Hy-Vee
+    'ABS' = 24,	// Albertsons
+    'KVT' = 25,	// KVAT
+    'LCL' = 27,	// LeClerc
+    'PME' = 31,	// PagueMenos
+    'GEA' = 32,	// Giant Eagle
+    'BYF' = 33,	// BigY
+    'COB' = 34,	// Coborn's
+    'ANC' = 35,	// Albertsons Non Carded
+    'ACO' = 36,	// Albertsons Combined
+    'DPS' = 39,	// DPSP
+    'PCH' = 40,	// Price Chopper
+    'TOP' = 41, // Tops
+    'SWE' = 44, // Swensons
+    'EXF' = 45, // Extrafarma
+    'BAS' = 46, // Bashas
+    'ABN' = 48, // Albertsons New
+}

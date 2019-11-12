@@ -1,0 +1,18 @@
+<div id="no-data-message" *ngIf="type>1">
+    <div class="text-center application-error">
+
+    </div>
+    <div class="application-error">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <label [phraseKey]="phraseKeys.errorTitle"></label>
+            </div>
+            <div class="panel-body ">
+                <div *ngIf="type==2 " [phraseKey]="phraseKeys.noData " class="text-info text-center errorCustomTxt "></div>
+                <div *ngIf="type==3 " [phraseKey]="phraseKeys.errorMessage " class="text-danger text-center errorCustomTxt "></div>
+                <div *ngIf="type==4 " [phraseKey]="phraseKeys.noDataMigration " class="text-info text-center errorCustomTxt "></div>
+                <div *ngIf="type==5 " [phraseKey]="customMessageKey " class="text-info text-center errorCustomTxt "></div>
+            </div>
+        </div>
+    </div>
+</div>

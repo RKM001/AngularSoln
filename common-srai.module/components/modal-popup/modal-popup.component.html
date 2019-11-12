@@ -1,0 +1,19 @@
+<div class="modal-content mex-report">
+    <div class="modal-header">
+        <h5 class="modal-title pull-left" *ngIf="data.mode == 1" [phraseKey]="'SUCCESS'"></h5>
+        <h5 class="modal-title pull-left" *ngIf="data.mode == 2" [phraseKey]="'ERROR'"></h5>
+        <h5 class="modal-title pull-left" *ngIf="data.mode == 3" [phraseKey]="'WARNING'"></h5>
+        <button aria-label="Close" (click)="onNoClick()" class="close pull-right" type="button">
+                <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body filter-info">
+        <div [phraseKey]='data.value'></div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-info" (click)="onNoClick()">
+                {{closeKey}}
+        </button>
+    </div>
+</div>

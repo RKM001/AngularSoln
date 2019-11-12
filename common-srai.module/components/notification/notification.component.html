@@ -1,0 +1,37 @@
+<li class="dropdown notificationAlert" id="notification-id">
+  <a class="count-info" (click)="toggleNotification()">
+    <i class="fa fa-bell fa-lg"></i>
+    <span *ngIf="listOfNotification.length" class="label label-danger">{{listOfNotification.length}}</span>
+  </a>
+
+  <ul class="dropdown-menu dropdown-alerts" *ngIf="listOfNotification.length > 0" [@toggleState]="toggle" (mouseout)="mouseOut()"
+    (mouseover)="mouseOver()">
+    <div class="notificationTitle">
+      <label>Notification Center</label>
+      <span class="badge">{{listOfNotification.length}}</span>
+      <i class="fa fa-close pull-right closeNotification btn" (click)="closeNotification()"></i>
+    </div>
+    <div class="dropdown-items scrollbar" id="notification-items">
+      <li *ngFor="let notification of listOfNotification">
+        <div class="card notification-card alert" [ngClass]="{'alert-success':notification.type == 1,'alert-info':notification.type == 2,
+      'alert-warning':notification.type == 3,'alert-danger':notification.type == 4 }">
+          <div class="row">
+            <div class="col-sm-12 card">
+              <div class="card-header">
+                <label>{{notification.title}}</label>
+                <i class="fa fa-close pull-right closeNotification btn" (click)="closeNotificationItem(notification)"></i>
+              </div>
+              <div class="card-body">
+                <span class="card-title">{{notification.content}}</span>
+              </div>
+              <div class="card-footer">
+                <a *ngIf="notification.link" href="{{notification.link}}" class="card-link pull-left card-text text-muted badge">Click here</a>
+                <span class="card-text text-muted pull-right badge">{{notification.dateTime| amLocale:culture | amTimeAgo}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </ul>
+</li>

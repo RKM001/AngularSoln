@@ -1,0 +1,31 @@
+.pdfViewer {
+    height: 100%;
+    position: relative;
+    color: white;
+    padding-top: 40px
+}
+.pdfViewerOptions {
+    position: absolute;
+    width: calc(100% - 30px);
+    top: 0;
+    left: 15px;
+    height: 40px;
+    background: #537a85;
+    z-index: 9;
+    padding: 0 15px;
+    padding-top: 4px
+}
+.pdfViewerIn {
+    overflow: auto;
+    height: 100%;
+    position: relative;
+    background: white
+}
+.pdfViewer .col-md-12 {height: 100%}
+.downloadPDF {margin-left: 20px}
+
+@media screen and (max-width:1024px){
+    .pdfViewerOptions .btn-sm{
+        padding: 5px
+    }
+}

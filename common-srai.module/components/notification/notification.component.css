@@ -1,0 +1,35 @@
+.notification-card { word-wrap: break-word;}
+.notificationAlert .dropdown-menu{ min-width: 300px; top: 20px; max-width: 400px; right: 20px; display: block; padding: 3px; }
+.notificationAlert .dropdown-items { width: 295px; max-height: 300px; overflow-y: auto; padding-right: 3px; overflow-x: hidden; }
+::ng-deep .notificationAlert .card-footer a.card-link{min-height: 10px; padding: 2px 10px 4px 10px; color: #888; font-size: 11px}
+.notificationAlert .card-footer{ margin-top: 10px}
+.notificationTitle { font-size: 14px; background-color: #537a85; padding: 5px; margin-bottom: 3px; border-radius: inherit;}
+.notificationAlert .closeNotification { padding: 0px}
+.notification-card.alert{ margin-bottom: 3px; padding: 10px}
+::ng-deep li.notificationAlert a:hover,
+::ng-deep li.notificationAlert a.active,
+::ng-deep li.notificationAlert.open a {
+    opacity: 0.8;
+}
+
+.scrollbar {	
+	float: left;
+	overflow-y: scroll;
+}
+li#notification-id{
+	margin-right: 0
+}
+.scrollbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+	background-color: #2D6A7C;
+	border-radius: 10px;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: #F5F5F5;
+}

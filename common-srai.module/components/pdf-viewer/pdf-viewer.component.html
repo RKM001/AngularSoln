@@ -1,0 +1,25 @@
+<srai-application-error [type]="msgr.type"></srai-application-error>
+<div class="pdfViewer">
+    <div class="pdfViewerOptions" *ngIf="!msgr.hasMessageToDisplay">
+        <div class="form-group clrWhite">
+            <label class="lable-color">PDF Navigation: </label>
+            <button class="btn btn-primary btn-sm" (click)="prevPage()" [disabled]="page === 1">Prev</button>
+            <span class="lable-color">{{ page }} / {{ totalPages }}</span>
+            <button (click)="nextPage()" class="btn btn-primary btn-sm " [disabled]="page === totalPages">Next</button>
+            <div class="pull-right">
+                <label class="lable-color zoom-lable">Zoom Options: </label>
+                <button class="btn btn-primary btn-sm" (click)="incrementZoom(0.1)">Zoom In(+)</button>
+                <button class="btn btn-primary btn-sm" (click)="incrementZoom(-0.1)">Zoom Out(-)</button>
+                <button class="btn btn-primary btn-sm" (click)="resetZoom()">Reset Zoom</button>
+                <button class="btn btn-primary btn-sm downloadPDF" (click)="downloadFile()">Download PDF</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-12" *ngIf="!msgr.hasMessageToDisplay">
+        <div class="pdfViewerIn">
+            <pdf-viewer [src]="pdfSrc" [original-size]="true" [autoresize]="true" [show-all]="false" [page]="page" [zoom]="zoom"
+                (after-load-complete)="afterLoadComplete($event)" (error)="onError($event)"></pdf-viewer>
+        </div>
+    </div>
+</div>
